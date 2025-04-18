@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostel 1 - IIT Bombay</title>
+  <style>
+    :root {
+      --bg-color: rgba(255, 255, 255, 0.9);
+      --text-color: #000;
+      --header-bg: rgba(0, 31, 63, 0.8);
+      --nav-bg: rgba(0, 64, 128, 0.8);
+      --nav-hover: #0066cc;
+      --link-color: #004080;
+      --toggle-bg: #fff;
+      --toggle-color: #000;
+      --toggle-border: #000;
+    }
+
+    .dark-theme {
+      --bg-color: rgba(0, 0, 0, 0.7);
+      --text-color: #fff;
+      --header-bg: rgba(0, 0, 0, 0.8);
+      --nav-bg: rgba(26, 26, 26, 0.8);
+      --nav-hover: #333;
+      --link-color: #66b2ff;
+      --toggle-bg: #000;
+      --toggle-color: #fff;
+      --toggle-border: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('images.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--header-bg);
+      color: var(--text-color);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    nav {
+      display: flex;
+      background-color: var(--nav-bg);
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: var(--nav-hover);
+    }
+    .theme-toggle {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      background-color: var(--toggle-bg);
+      border: 1px solid var(--toggle-border);
+      color: var(--toggle-color);
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    .corner-image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 80px;
+      height: auto;
+    }
+    section {
+      padding: 20px;
+      background-color: var(--bg-color);
+      backdrop-filter: blur(8px);
+      margin: 20px;
+      border-radius: 12px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .complaint-link {
+      margin: 10px 0;
+    }
+    .complaint-link a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .complaint-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hostel 1 - IIT Bombay</h1>
+    <img src="image logo.png" alt="Hostel Logo" class="corner-image">
+  </header>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#council">Council</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#complaints">Complaints</a>
+  </nav>
+
+  <section id="home">
+    <h2>About Us</h2>
+    <p>Welcome to Hostel 1, one of the most vibrant and active hostels in IIT Bombay. We take pride in our facilities and the community spirit of our residents.</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <h3>Mess</h3>
+        <img src="images/mess.jpg" alt="Mess">
+      </div>
+      <div class="gallery-item">
+        <h3>Common Room</h3>
+        <img src="images/common_room.jpg" alt="Common Room">
+      </div>
+      <div class="gallery-item">
+        <h3>Grounds</h3>
+        <img src="images/grounds.jpg" alt="Grounds">
+      </div>
+      <div class="gallery-item">
+        <h3>Council Room</h3>
+        <img src="images/council_room.jpg" alt="Council Room">
+      </div>
+      <div class="gallery-item">
+        <h3>Yoga Room</h3>
+        <img src="images/yoga_room.jpg" alt="Yoga Room">
+      </div>
+      <div class="gallery-item">
+        <h3>TT & Pool Room</h3>
+        <img src="images/tt_pool.jpg" alt="TT and Pool Room">
+      </div>
+      <div class="gallery-item">
+        <h3>Culturals Room</h3>
+        <img src="images/culturals.jpg" alt="Culturals Room">
+      </div>
+      <div class="gallery-item">
+        <h3>Gym</h3>
+        <img src="images/gym.jpg" alt="Gym">
+      </div>
+      <div class="gallery-item">
+        <h3>Music Room</h3>
+        <img src="images/music_room.jpg" alt="Music Room">
+      </div>
+    </div>
+  </section>
+
+  <section id="council">
+    <h2>Hostel Council</h2>
+    <p>Details of Hostel 1's council members and their responsibilities will be listed here.</p>
+  </section>
+
+  <section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p>Track our hostel's performance in Inter-Hostel events, sports, and more!</p>
+  </section>
+
+  <section id="complaints">
+    <h2>Complaint Forms</h2>
+    <div class="complaint-link">
+      <a href="https://example.com/mess-complaint" target="_blank">Mess Complaint Form</a>
+    </div>
+    <div class="complaint-link">
+      <a href="https://example.com/maintenance-complaint" target="_blank">Maintenance Complaint Form</a>
+    </div>
+    <div class="complaint-link">
+      <a href="https://example.com/wifi-complaint" target="_blank">Wi-Fi Complaint Form</a>
+    </div>
+    <div class="complaint-link">
+      <a href="https://example.com/general-complaint" target="_blank">General Complaint Form</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+  </script>
+</body>
+</html>
